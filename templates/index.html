@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Movie Recommender</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #141414; color: white; text-align: center; padding: 50px; }
+        .container { max-width: 600px; margin: auto; background: #222; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        input { padding: 12px; width: 70%; border-radius: 5px; border: none; margin-bottom: 20px; }
+        button { padding: 12px 25px; background: #e50914; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #b20710; }
+        ul { list-style: none; padding: 0; }
+        li { background: #333; margin: 10px 0; padding: 15px; border-radius: 5px; border-left: 5px solid #e50914; transition: 0.3s; }
+        li:hover { transform: scale(1.02); background: #444; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Movie AI</h1>
+        <form method="POST">
+            <input type="text" name="movie_name" placeholder="Type a movie (e.g., Pulp Fiction)" required>
+            <button type="submit">Recommend</button>
+        </form>
+
+        {% if recs %}
+            <h3 style="margin-top: 30px;">Because you liked "{{ movie }}":</h3>
+            <ul>
+                {% for r in recs %}
+                    <li>{{ r }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
