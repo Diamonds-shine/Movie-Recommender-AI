@@ -1,4 +1,5 @@
-# 🎬 Movie Recommender AI
+<img width="1710" height="969" alt="Screenshot 2026-02-19 at 1 17 07 AM" src="https://github.com/user-attachments/assets/e6097120-2907-4976-9691-0812bf9cb2b7" />
+ 🎬 Movie Recommender AI
 
 A full-stack recommendation engine that suggests movies based on user rating patterns. This project uses **Item-Based Collaborative Filtering** to find mathematical similarities between films.
 
